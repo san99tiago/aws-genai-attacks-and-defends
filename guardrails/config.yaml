@@ -1,0 +1,17 @@
+model_list:
+  - model_name: claude-opus-4-6-v1
+    litellm_params:
+      model: bedrock/global.anthropic.claude-opus-4-6-v1
+      aws_region_name: us-east-1
+
+guardrails:
+  - guardrail_name: "bedrock-pre-guard"
+    litellm_params:
+      guardrail: bedrock
+      mode: "pre_call"
+      guardrailIdentifier: "xfempsf8z8i9"
+      guardrailVersion: "1"
+      aws_region_name: "us-east-1"
+      ###### ESTA SE ACTIVA PARA APLICAR A TODOS LOS REQUESTS ######
+      # default_on: true
+
